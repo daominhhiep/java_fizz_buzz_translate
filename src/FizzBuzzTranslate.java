@@ -3,7 +3,7 @@ public class FizzBuzzTranslate {
     public static final String FIZZ = "Fizz";
     public static final String BUZZ = "Buzz";
 
-    public static String translate(int number) {
+    public String translate(int number) {
         if (number % 3 == 0 && number % 5 == 0) {
             return FIZZ_BUZZ;
         }
@@ -19,13 +19,13 @@ public class FizzBuzzTranslate {
         return String.valueOf(number);
     }
 
-    private static char[] getChars(int number) {
+    private char[] getChars(int number) {
         String string_number = String.valueOf(number);
         return string_number.toCharArray();
     }
 
 
-    private static boolean isContainedThree(int number) {
+    private boolean isContainedThree(int number) {
         char[] chars = getChars(number);
         for (int index = 0; index < chars.length; index++) {
             if (chars[index] == '3') {
@@ -35,7 +35,7 @@ public class FizzBuzzTranslate {
         return false;
     }
 
-    private static boolean isContainedFive(int number) {
+    private boolean isContainedFive(int number) {
         char[] chars = getChars(number);
         for (int index = 0; index < chars.length; index++) {
             if (chars[index] == '5') {
@@ -45,7 +45,7 @@ public class FizzBuzzTranslate {
         return false;
     }
 
-    private static String readNumber(int number) {
+    private String readNumber(int number) {
         char[] chars = getChars(number);
         String stringResult = "";
         int index = 0, whiteSpace = index + 1;
